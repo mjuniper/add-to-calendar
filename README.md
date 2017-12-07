@@ -14,6 +14,10 @@ Thus we can do all of this on the client side.
 
 My testing indicates that timezones will just work. But if we run into problems, the iCalendar spec provides for more complex timezone specification.
 
+### Google calendar
+
+Wow there does not seem to be any official documentation. But I found [this](https://stackoverflow.com/questions/22757908/google-calendar-render-action-template-parameter-documentation).
+
 ### iCalendar
 
 [iCalendar spec](https://icalendar.org/RFC-Specifications/iCalendar-RFC-5545/)

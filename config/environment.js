@@ -44,7 +44,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.rootURL = '/add-to-calendar';
+    ENV.locationType = 'hash';
   }
 
   return ENV;
