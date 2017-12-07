@@ -1,0 +1,9 @@
+
+{{#each events as |event|}}
+  <h3>{{event.attributes.title}}</h3>
+  {{date-range model=event}}
+  {{add-to-calendar model=event}}
+  <hr>
+{{/each}}
+
+{{outlet}}
