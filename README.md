@@ -4,9 +4,7 @@ Prototype of hub event add-to-calendar component
 
 ## NOTES:
 
-OSX Calendar App and recent versions of outlook both support iCalendar. We can support this with a data uri. However, this is highly dependent on the user's configuration. In order for this to work seamlessly, the user must:
-1. Have their browser configured to always open files of type .ics.
-1. Have their preferred calendar application set to open .ics files.
+OSX Calendar App and recent versions of Outlook both support [iCalendar](https://icalendar.org). We can support this with a data uri. However, see notes under iCalendar below.
 
 Google calendar is just a url.
 
@@ -21,6 +19,10 @@ Wow there does not seem to be any official documentation. But I found [this](htt
 - I set the event page url as the `sprop` queryparam. I don't see this surface in the ui so I also append it to the end of the description.
 
 ### iCalendar
+
+How seemless this is to the user is is highly dependent on the user's configuration. In order for this to work seamlessly, the user must:
+1. Have their browser configured to always open files of type .ics.
+1. Have their preferred calendar application set to open .ics files.
 
 [iCalendar spec](https://icalendar.org/RFC-Specifications/iCalendar-RFC-5545/)
 [iCalendar validator](https://icalendar.org/validator.html)
