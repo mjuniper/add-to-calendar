@@ -16,15 +16,16 @@ My testing indicates that we are already doing what is necessary in order for ti
 
 Wow there does not seem to be any official documentation. But I found [this](https://stackoverflow.com/questions/22757908/google-calendar-render-action-template-parameter-documentation).
 
-- I set the event page url as the `sprop` queryparam. I don't see this surface in the ui so I also append it to the end of the description.
+- I set the event page url as the `sprop` queryparam. However, I don't see this surface in the ui so I also append it to the end of the description.
 
 ### iCalendar
 
-How seemless this is to the user is is highly dependent on the user's configuration. In order for this to work seamlessly, the user must:
+How seemless this is to the user is highly dependent on the user's configuration. In order for this to work seamlessly, the user must:
 1. Have their browser configured to always open files of type .ics.
 1. Have their preferred calendar application set to open .ics files.
 
 [iCalendar spec](https://icalendar.org/RFC-Specifications/iCalendar-RFC-5545/)
+
 [iCalendar validator](https://icalendar.org/validator.html)
 
 - [PRODID](https://icalendar.org/iCalendar-RFC-5545/3-7-3-product-identifier.html) is required a required element of the `VCALENDAR` object it is intended to uniquely identify the product that created the event. I recommend we use : `+//arcgis.com//NONSGML ArcGIS Hub//EN`
