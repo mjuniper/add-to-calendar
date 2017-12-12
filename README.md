@@ -30,12 +30,12 @@ How seemless this is to the user is highly dependent on the user's configuration
 [iCalendar validator](https://icalendar.org/validator.html)
 
 #### Notes:
-- [PRODID](https://icalendar.org/iCalendar-RFC-5545/3-7-3-product-identifier.html) is required a required element of the `VCALENDAR` object it is intended to uniquely identify the product that created the event. I recommend we use : `+//arcgis.com//NONSGML ArcGIS Hub//EN`
-- [UID](https://icalendar.org/iCalendar-RFC-5545/3-8-4-7-unique-identifier.html) is intended to uniquely identify the event I _think_ we can use `pageId` for this.
-- URL will be the url of the event page. In this demo we do not have that but we can get it in the hub apps. I don't see this surface in outlook so in those cases i append it to the end of the description
-- [DTSTAMP](https://icalendar.org/iCalendar-RFC-5545/3-8-7-2-date-time-stamp.html) will be updated date
-- [GEO](https://icalendar.org/iCalendar-RFC-5545/3-8-1-6-geographic-position.html) I believe i am setting this according to the spec but I don't see it in any of the calendars
-- LOCATION, CONFERENCE - I was never able to get outlook to respect CONFERENCE and icalendar seemed to respect it _sometimes_. Thus, if we have a location that is a url, we set it as LOCATION and CONFERENCE. If location is not a url we just set it on LOCATION
+- [PRODID](https://icalendar.org/iCalendar-RFC-5545/3-7-3-product-identifier.html) is a required element of the `VCALENDAR` object. It is intended to uniquely identify the product that created the event. I recommend we use : `+//arcgis.com//NONSGML ArcGIS Hub//EN`
+- [UID](https://icalendar.org/iCalendar-RFC-5545/3-8-4-7-unique-identifier.html) is intended to uniquely identify the event. I _think_ we can use `pageId` for this.
+- URL will be the url of the event page. In this demo we do not have that but we can get it in the hub apps. I don't see this surface in outlook so for Outlook I append it to the end of the description.
+- [DTSTAMP](https://icalendar.org/iCalendar-RFC-5545/3-8-7-2-date-time-stamp.html) will be updated date.
+- [GEO](https://icalendar.org/iCalendar-RFC-5545/3-8-1-6-geographic-position.html) I believe i am setting this according to the spec but I don't see it in any of the calendars.
+- LOCATION, CONFERENCE - I was never able to get outlook to respect CONFERENCE and icalendar seemed to respect it _sometimes_. Thus, if we have a location that is a url, we set it as LOCATION _and_ CONFERENCE. If location is not a url we just set it on LOCATION.
 
 
 ### Sample iCalendar files
