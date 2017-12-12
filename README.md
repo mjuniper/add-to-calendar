@@ -16,6 +16,7 @@ My testing indicates that we are already doing what is necessary in order for ti
 
 Wow there does not seem to be any official documentation. But I found [this](https://stackoverflow.com/questions/22757908/google-calendar-render-action-template-parameter-documentation).
 
+#### Notes:
 - I set the event page url as the `sprop` queryparam. However, I don't see this surface in the ui so I also append it to the end of the description.
 
 ### iCalendar
@@ -28,6 +29,7 @@ How seemless this is to the user is highly dependent on the user's configuration
 
 [iCalendar validator](https://icalendar.org/validator.html)
 
+#### Notes:
 - [PRODID](https://icalendar.org/iCalendar-RFC-5545/3-7-3-product-identifier.html) is required a required element of the `VCALENDAR` object it is intended to uniquely identify the product that created the event. I recommend we use : `+//arcgis.com//NONSGML ArcGIS Hub//EN`
 - [UID](https://icalendar.org/iCalendar-RFC-5545/3-8-4-7-unique-identifier.html) is intended to uniquely identify the event I _think_ we can use `pageId` for this.
 - URL will be the url of the event page. In this demo we do not have that but we can get it in the hub apps. I don't see this surface in outlook so in those cases i append it to the end of the description
